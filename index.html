@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <h1>Task Manager</h1>
+                <p class="subtitle">Organize your work. Achieve your goals.</p>
+            </div>
+            <div class="student-badge">
+                Student ID: <span id="student-id">71485</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="form-section">
+            <h2 id="form-heading">Create a new task</h2>
+
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-title">Task title</label>
+                    <input
+                        type="text"
+                        id="task-title"
+                        placeholder="Enter task title..."
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="task-description">Description</label>
+                    <textarea
+                        id="task-description"
+                        placeholder="Enter task description..."
+                        rows="3"
+                    ></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="task-submit">
+                        Add Task
+                    </button>
+                    <button type="button" id="cancel-edit" hidden>
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="tasks-section">
+            <div class="section-heading">
+                <h2>My Tasks</h2>
+                <span id="task-count">0 tasks</span>
+            </div>
+
+            <div id="status-message" role="status">
+                Loading tasks...
+            </div>
+
+            <div id="task-list">
+                <!-- Tasks will be loaded here -->
+            </div>
+        </section>
+
+        <footer>
+            <a id="contribution-link" href="contribution.html">
+                View Team Contribution →
+            </a>
+            <p>Task Manager | Team Project - IT</p>
+        </footer>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
