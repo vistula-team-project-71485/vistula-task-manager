@@ -53,3 +53,25 @@ https://vistula-team-project-71485.github.io/vistula-task-manager/
 
 Makar Matviienko  
 Student ID: 71485
+
+
+## Team Collaboration
+
+### My contribution to partner's repository
+
+Pull Request: [Add team contribution - Makar Matviienko](https://github.com/vistula-team-project-73497/vistula-task-manager/pull/2)
+
+Contributor: Makar Matviienko
+Student ID: 71485
+
+### Partner's contribution to my repository
+
+Pull Request: [Add contributor page - 73497](https://github.com/vistula-team-project-71485/vistula-task-manager/pull/1)
+
+Contributor: NURMUKHAMMET-73497
+Student ID: 73497
+
+### Contribution Pages
+
+- [Contributor HTML](https://vistula-team-project-71485.github.io/vistula-task-manager/contribution.html)
+- [Contributor JSON](https://vistula-team-project-71485.github.io/vistula-task-manager/contribution.json)
