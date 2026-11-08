@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Contribution</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Team Contribution</h1>
+
+    <button type="button" id="load-contributor">
+      Show Contributor
+    </button>
+
+    <p id="contributor-student-id" aria-live="polite"></p>
+
+    <a href="index.html">Back to Task Manager</a>
+  </main>
+
+  <script>
+    const button = document.getElementById("load-contributor");
+    const output = document.getElementById("contributor-student-id");
+
+    button.addEventListener("click", async () => {
+      button.disabled = true;
+      output.textContent = "Loading...";
+
+      try {
+        const response = await fetch("./contribution.json");
+
+        if (!response.ok) {
+          throw new Error("Could not load contributor information.");
+        }
+
+        const data = await response.json();
+
+        if (!data.contributorStudentId) {
+          throw new Error("Contributor student ID is missing.");
+        }
+
+        output.textContent =
+          "Contributor Student ID: " + data.contributorStudentId;
+      } catch (error) {
+        output.textContent = "Error: " + error.message;
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
